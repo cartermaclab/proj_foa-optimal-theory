@@ -1,0 +1,201 @@
+Author,Year,Type_of_Meta-Analysis,Age_Group,Health_Status,Skill_Level,N,Task,Outcome_Measure,Hedges_g,Standard_Error,Risk_of_Bias
+Coker,2016,Distance effect,Adults,Healthy,Expert,21,Jumping,Jump distance,-0.232,0.217,Moderate
+Kearney,2015,Distance effect,Adult,Healthy,Novice,18,Golf putting,Accuracy score,0.873,0.273,Low
+"Marchant, Griffiths, et al.",2018,Distance effect,Children,Healthy,Novice,54,Jumping,Jump distance,0.101,0.135,Moderate
+Porter et al.,2013,Distance effect,Adult,Healthy,Expert,38,Jumping,Jump distance,0.335,0.165,Moderate
+Raisbeck & Yamada,2019,Distance effect,Adult,Healthy,Novice,24,Jumping,Jump height,0.291,0.205,Low
+Duke et al.,2011,Distance effect,Adult,Healthy,Novice,12,Piano playing,Inter-onset interval variability,0.812,0.324,Low
+Duke et al.,2011,Distance effect,Adult,Healthy,Expert,4,Piano playing,Inter-onset interval variability,0.374,0.454,Low
+Lohse et al.,2014,Distance effect,Adult,Healthy,Novice,15,Dart throwing,Absolute error,5.248,0.991,Low
+McKay & Wulf,2012,Distance effect,Adult,Healthy,Novice,36,Dart throwing,Accuracy score,0.417,0.172,Moderate
+Porter et al.,2012,Distance effect,Adult,Healthy,Experienced,35,Jumping,Jump distance,0.191,0.169,Moderate
+Stambaugh,2017,Distance effect,Adult,Healthy,Novice,15,Playing of musical instrument,Pitch error,-0.461,0.265,Low
+Stambaugh,2017,Distance effect,Adult,Healthy,Experienced,15,Playing of musical instrument,Pitch error,0.017,0.251,Low
+Ducharme & Wu,2015,EMG,Adults,Healthy,Novice,29,Balance,Peak EMG of right tibialis,0.14,0.184,Low
+Greig & Marchant,2014,EMG,Adult,Healthy,Experienced,25,Elbow flexion,Peak EMG of biceps brachii,1.502,0.171,Low
+"Halperin, Hughes, et al.",2016,EMG,Adult,Healthy,Experienced,28,Elbow flexion,Normalized EMG of biceps brachii,-0.075,0.187,Low
+Kal et al.,2013,EMG,Adult,Healthy,Novice,30,Cyclic single-leg extension-flexion,Mean EMG of rectus,-0.112,0.181,Low
+Kuhn et al.,2018 Exp 1,EMG,Adult,Healthy,Novice,14,Finger flexion,RMS EMG of,0.275,0.265,Low
+Kuhn et al.,2017,EMG,Adult,Healthy,Novice,10,Finger abduction,EMG suppression of right first dorsal interosseous,1.628,0.474,Low
+Lohse & Sherwood,2012 Exp 1 & 2,EMG,Adult,Healthy,Novice,24,Force production (plantar flexion),Cocontraction ratio of tibialis to soleus,0.419,0.147,Low
+Lohse et al.,2010,EMG,Adult,Healthy,Novice,12,Dart throwing,Integrated EMG of triceps,1.37,0.395,Low
+Lohse et al.,2011,EMG,Adult,Healthy,Novice,12,Force production (plantar flexion),Cocontraction ratio of tibialis to soleus,1.516,0.416,Low
+Marchant & Greig,2017,EMG,Adult,Healthy,Experienced,20,Force production (knee extension),Integrated EMG of vastus medialis,0.279,0.224,Low
+"Marchant, Greig, et al.",2009,EMG,Adult,Healthy,Experienced,25,Elbow flexion,Integrated EMG of biceps brachii,1.705,0.311,Low
+Pelleck & Passmore,2017,EMG,Adult,Healthy,Novice,11,Golf putting,RMS EMG of left,0.037,0.205,Low
+Pelleck & Passmore,2017,EMG,Adult,Healthy,Expert,13,Golf putting,extensor carpi radialis,0.075,0.19,Low
+Vance et al.,2004 Exp 1 & 2,EMG,Adult,Healthy,Experienced,24,Biceps curls,Integrated EMG of,1.42,0.286,Low
+"Wulf, Dufek, et al.",2010,EMG,Adult,Healthy,Novice,8,Jumping,RMSE EMG of 5 leg,1.715,0.544,Low
+Zachry et al.,2005,EMG,Adult,Healthy,Experienced,14,throw,RMS EMG of triceps,1.31,0.359,Moderate
+Abdollahipour & Psotta,2017,Performance,Children,Healthy,Novice,24,Ball catching,Score,0.459,0.211,Moderate
+Abdollahipour et al.,2016,Performance,Adults,Healthy,Novice,24,Jumping,Jump height,0.097,0.201,Low
+Abdollahipour et al.,2015,Performance,Children,Healthy,Experienced,24,Jumping,Jump height,0.237,0.204,Moderate
+Asadi et al.,2015,Performance,Adults,Healthy,Novice,21,Javelin throwing,Throwing distance,0.299,0.219,Low
+Ashraf et al.,2017,Performance,Children,Healthy,Novice,20,Jumping,Jump-and-reach,0.118,0.22,Low
+Beck & Almeida,2017,Performance,Older adults,Idiopathic PD,Novice,19,Balance,Postural stability index score,0.054,0.159,Low
+Coker,2016,Performance,Adults,Healthy,Expert,21,Jumping,Jump distance,0.533,0.229,Moderate
+Coker,2018,Performance,Children,Healthy,Novice,26,Jumping,Jump distance,0.471,0.204,Moderate
+de Melker Worms et al.,2017,Performance,Older adults,Healthy,Experienced,28,walking,Step length,0.066,0.187,Low
+Diekfuss et al.,2018,Performance,Adults,Healthy,Novice,8,Balance,Time in mediolateral balance,0.872,0.399,Low
+Ducharme & Wu,2015,Performance,Adults,Healthy,Novice,29,Balance,Lateral displacement,0.385,0.19,Low
+Ducharme et al.,2015,Performance,Adults,Healthy,Novice,21,Jumping,Jump distance,0.308,0.219,Low
+Duke et al.,2011,Performance,Adult,Healthy,Novice,12,Piano playing,Inter-onset interval variability,-0.228,0.283,Low
+Duke et al.,2011,Performance,Adult,Healthy,Expert,4,Piano playing,Inter-onset interval variability,0.214,0.441,Low
+Durham et al.,2014,Performance,Older adult,Stroke,Novice,21,Reach-to-grasp and object manipulation,Movement time,-0.01,0.088,Low
+Fasoli et al.,2002,Performance,Older adult,Healthy,Novice,17,Reach-to-grasp,Movement time,0.539,0.254,Low
+Fasoli et al.,2002,Performance,Older adult,Stroke,Novice,16,and object manipulation,Movement time,0.288,0.249,Low
+Freudenheim et al.,2010 Exp 1,Performance,Adult,Healthy,Experienced,38,Swimming,Movement time,0.146,0.161,Low
+Freudenheim et al.,2010 Exp 2,Performance,Adult,Healthy,Experienced,30,Swimming,Movement time,0.184,0.182,Low
+Greig & Marchant,2014,Performance,Adult,Healthy,Experienced,25,Elbow flexion,Peak torque,0.215,0.116,Low
+Halperin et al.,2017,Performance,Adult,Healthy,Experienced,8,Punching,Velocity,0.236,0.339,Low
+Halperin et al.,2017,Performance,Adult,Healthy,Expert,7,Punching,Velocity,0.102,0.355,Low
+"Halperin, Hughes, et al.",2016,Performance,Adult,Healthy,Experienced,28,and jumping,jump height,0.24,0.134,Low
+"Halperin, Williams, et al.",2016,Performance,Adult,Healthy,Novice,18,Midthigh pull,Peak force,0.323,0.237,Low
+Hebert & Williams,2017,Performance,Adult,Healthy,Novice,27,Jumping,Jump distance,0.154,0.191,Moderate
+Hill et al.,2017,Performance,Adult,Healthy,Experienced,30,Treadmill running,Oxygen consumption,0.15,0.181,Low
+Hosseiny et al.,2014,Performance,Adult,Healthy,Expert,10,shooting,Accuracy score,1.889,0.521,Low
+Huang et al.,2014,Performance,Adult,Healthy,Novice,12,Balance,Angular deviation,0.767,0.32,Low
+Ille et al.,2013,Performance,Adult,Healthy,Novice,8,Sprinting,Movement time,1.04,0.423,Low
+Ille et al.,2013,Performance,Adult,Healthy,Expert,8,Sprinting,Movement time,0.945,0.409,Low
+Jazaeri et al.,2018,Performance,Older adult,Healthy,Novice,17,Balance,Center of pressure velocity,1.004,0.159,Low
+Jazaeri et al.,2018,Performance,Older adult,Idiopathic PD,Novice,34,Balance,Center of pressure velocity,0.347,0.173,Low
+Kal et al.,2013,Performance,Adult,Healthy,Novice,30,Cyclic single-leg extension-flexion,Movement time per,0.199,0.182,Low
+Kearney,2015,Performance,Adult,Healthy,Novice,18,Golf putting,Accuracy score,-0.101,0.231,Low
+Klostermann et al.,2014,Performance,Adult,Healthy,Expert,24,Golf putting,Radial error,1.209,0.266,Low
+Kuhn et al.,2018 Exp 1 & 2,Performance,Adult,Healthy,Novice,26,Finger flexion,Mean force and reaction time,0.211,0.192,Low
+Kuhn et al.,2017,Performance,Adult,Healthy,Novice,14,Finger abduction,Time to task failure,0.607,0.284,Low
+Landers et al.,2005,Performance,Older adult,Idiopathic PD,Novice,22,Balance,Equilibrium score,0.66,0.138,Low
+Lisman & Sadagopan,2013,Performance,Adult,Healthy,Novice,20,Speech,Production time,1.205,0.29,Low
+Lohse et al.,2014,Performance,Adult,Healthy,Novice,15,Dart throwing,Absolute error,0.791,0.29,Low
+Lohse & Sherwood,2011 Exp 1,Performance,Adult,Healthy,Novice,20,Wall-sit,Time to task failure,0.223,0.222,Low
+Lohse & Sherwood,2012 Exp 1 & 2,Performance,Adult,Healthy,Novice,24,Force production (plantar flexion),Absolute error and time to task failure,0.273,0.142,Low
+Lohse et al.,2010,Performance,Adult,Healthy,Novice,12,Dart throwing,Absolute error,1.274,0.381,Low
+Lohse et al.,2011,Performance,Adult,Healthy,Novice,12,Force production (plantar flexion),Absolute error,2.587,0.597,Low
+Makaruk et al.,2015,Performance,Older adult,Healthy,Experienced,23,Ergometer cycling,Maximum power,0.303,0.21,Low
+Makaruk et al.,2013,Performance,Adult,Healthy,Experienced,30,Shot put,Throw distance,0.274,0.13,Low
+"Marchant, Carnegie, et al.",2018,Performance,Adult,Healthy,Novice,26,Golf putting,Radial error,0.362,0.142,Low
+"Marchant, Clough, et al.",2009,Performance,Adult,Healthy,Novice,72,Dart throwing,Absolute error,0.336,0.085,Low
+Marchant & Greig,2017,Performance,Adult,Healthy,Experienced,20,Force production (knee extension),Peak torque,0.012,0.219,Low
+Marchant et al.,2011,Performance,Adult,Healthy,Experienced,40,Bench press and back squat,Number of repetitions to failure,0.752,0.155,Moderate
+"Marchant, Greig, et al.",2009,Performance,Adult,Healthy,Experienced,25,Elbow flexion,Peak torque,2.962,0.463,Low
+"Marchant, Griffiths, et al.",2018,Performance,Children,Healthy,Novice,98,Jumping,Jump distance,0.122,0.101,Moderate
+Maurer & Munzert,2013 Exp 1,Performance,Children,Healthy,Expert,23,Basketball free throw,Success rate,-0.523,0.219,Low
+Maurer & Munzert,2013 Exp 2,Performance,Adult,Healthy,Novice,14,Golf putting,Success rate,-0.554,0.28,Low
+McNevin et al.,2013,Performance,Adult,Healthy,Novice,12,Supra-postural manual tracking,Time on target,0.118,0.199,Low
+McNevin et al.,2013,Performance,Older adult,Cardiac condition,Novice,12,Supra-postural manual tracking,Time on target,0.532,0.212,Low
+Mornell & Wulf,2019 Exp 1 & 2,Performance,Adult,Healthy,Novice,41,Music,Musicality score,0.532,0.164,Low
+Nadzalan et al.,2015,Performance,Adult,Healthy,Experienced,30,Bench press,Number of repetitions to failure,2.488,0.319,Low
+Neumann & Piercy,2013,Performance,Adult,Healthy,Novice,21,Treadmill running,Oxygen consumption,-0.402,0.223,Low
+Oki et al.,2018,Performance,Adult,Healthy,Expert,12,throwing,Throw distance,1.699,0.445,Low
+Palmer et al.,2017,Performance,Children,Healthy,Novice,44,Ball control,Score,0.442,0.157,Low
+Pelleck & Passmore,2017,Performance,Adult,Healthy,Novice,11,Golf putting,Radial error,-0.113,0.206,Low
+Pelleck & Passmore,2017,Performance,Adult,Healthy,Expert,13,Golf putting,Radial error,0.011,0.195,Low
+"Perkins-Ceccato, et al.",2003,Performance,Not reported,Healthy,Experienced,10,Golf pitch shot,Radial error,-0.183,0.306,Low
+"Perkins-Ceccato, et al.",2003,Performance,Not reported,Healthy,Expert,10,Golf pitch shot,Radial error,0.056,0.303,Low
+Polskaia et al.,2015,Performance,Adult,Healthy,Novice,20,Postural control,Sway area,0.052,0.219,Low
+Porter & Anton,2011,Performance,Older adult,Cancer,Novice,5,Manual tracking,Contact time,0.749,0.468,Low
+Porter et al.,2013,Performance,Adult,Healthy,Expert,38,Jumping,Jump distance,0.46,0.169,Moderate
+"Porter, Nolan, et al.",2010,Performance,Adult,Healthy,Novice,20,Sprinting,Movement time,2.639,0.471,Low
+Porter & Sims,2013,Performance,Adult,Healthy,Expert,9,Sprinting,Movement time,0,0.317,Low
+Porter et al.,2015,Performance,Adult,Healthy,Experienced,84,Sprinting,Movement time,0.223,0.11,Low
+Querfurth et al.,2016,Performance,Adult,Healthy,Experienced,20,Dart throwing,Radial error,0.129,0.22,Low
+Richer et al.,2017,Performance,Children,Healthy,Novice,16,Balance,Sway area,-0.123,0.245,Low
+Rossettini et al.,2017,Performance,Adult,Healthy,Novice,10,tapping,Number of errors,4.221,0.991,Low
+Saemi et al.,2016,Performance,Adult,Healthy,Expert,11,Basketball free,Accuracy score,1.492,0.304,Low
+"Schücker, Anheier, et al.",2013,Performance,Adult,Healthy,Expert,20,Treadmill running,Oxygen consumption,0.292,0.224,Low
+"Schücker, Fleddermann, et al.",2016,Performance,Adult,Healthy,Expert,24,Ergometer cycling,Oxygen consumption,0.054,0.201,Low
+Schücker et al.,2009,Performance,Adult,Healthy,Expert,24,Treadmill running,Oxygen consumption,0.345,0.207,Low
+Schücker et al.,2015,Performance,Adult,Healthy,Expert,18,Ergometer,Oxygen,0.157,0.232,Low
+"Schücker, Schmeing, et al.",2016,Performance,Adult,Healthy,Novice,30,Treadmill running,Oxygen consumption,0.329,0.185,Low
+Schutts et al.,2017,Performance,Adult,Healthy,Expert,12,Snatch,Barbell-cervical-hip angle at maximum height,0.154,0.28,Low
+"Shafizadeh, Platt & Mohammadi",2013,Performance,Adult,Multiple sclerosis,Novice,12,Treadmill walking,Step length,0.753,0.318,Moderate
+Sherwood et al.,2014 Exp 1 & 2,Performance,Adult,Healthy,Novice,48,Dart throwing,Radial error,2.32,0.276,Low
+Stambaugh,2017,Performance,Adult,Healthy,Novice,15,Playing of musical instrument,Pitch error,0.12,0.252,Low
+Stambaugh,2017,Performance,Adult,Healthy,Experienced,15,Playing of musical instrument,Pitch error,-0.199,0.254,Low
+Stoate & Wulf,2011,Performance,Children,Healthy,Expert,30,Swimming,Movement time,0.224,0.183,Low
+Winkelman et al.,2017 Exp 1 & 2,Performance,Adult,Healthy,Experienced,16,Sprinting,Movement time,0.221,0.247,Low
+Winkelman et al.,2017 Exp 1 & 2,Performance,Adult,Healthy,Expert,13,Sprinting,Movement time,-0.075,0.269,Low
+Wu et al.,2012,Performance,Adult,Healthy,Novice,21,Jumping,Jump distance,0.324,0.22,Moderate
+Wulf et al.,2008,Performance,Adult,Healthy,Expert,12,Balance,Mean power frequency,-0.022,0.279,Low
+Wulf & Dufek,2009,Performance,Adult,Healthy,Novice,10,Jumping,Center of mass displacement,0.555,0.327,Low
+"Wulf, Dufek, et al.",2010,Performance,Adult,Healthy,Novice,8,Jumping,Jump-and-reach,0.15,0.336,Low
+Wulf et al.,2009,Performance,Older adult,Idiopathic PD,Novice,14,Balance,RMSE center of pressure,0.435,0.272,Low
+Wulf & Su,2007 Exp 2,Performance,Adult,Healthy,Expert,6,Golf pitch shot,Accuracy score,0.669,0.423,Low
+"Wulf, Töllner, et al.",2007 Exp 1 & 2,Performance,Adult,Healthy,Novice,42,Balance,RMSE center of,0.092,0.108,Low
+"Wulf, Zachry, et al.",2007 Exp 1 & 2,Performance,Adult,Healthy,Novice,22,Jumping,Jump-and-reach height and center of,0.305,0.211,Low
+Yogev-Seligmann et al.,2017,Performance,Older adult,Healthy,Experienced,20,Walking,Step length,-0.047,0.219,Low
+Zachry et al.,2005,Performance,Adult,Healthy,Experienced,14,Basketball free,Accuracy score,0.462,0.274,Moderate
+Zarghami et al.,2012,Performance,Adult,Healthy,Experienced,20,Discus throwing,Distance,0.491,0.232,Low
+Ziv et al.,2013,Performance,Adult,Healthy,Experienced,24,Treadmill running,Oxygen consumption,-0.039,0.201,Low
+Abdollahipour et al.,2008,Retention,Children,Healthy,Novice,76,Soccer dribbling,Movement time,0.449,0.225,Moderate
+Abdollahipour et al.,2019 Exp 2,Retention,Adults,Visual,Novice,26,Pedalo riding,Movement time,0.379,0.383,Moderate
+Abdollahipour et al.,2014,Retention,Adults,Healthy,Novice,40,Dart throwing,Accuracy score,-0.076,0.31,Moderate
+Agar et al.,2016,Retention,Children,Healthy,Novice,48,Puck shooting,Accuracy score,-0.099,0.28,Low
+Ahmad et al.,2013,Retention,Adults,Healthy,Novice,44,Volleyball serve,Accuracy score,2.622,0.407,Moderate
+An et al.,2013,Retention,Adults,Healthy,Experienced,16,Golf swing,Carry distance,1.12,0.513,Low
+Beck et al.,2017,Retention,Older adults,Idiopathic PD,Novice,32,Ground walking,Step length,0.161,0.173,Low
+Becker & Smith,2013,Retention,Children,Healthy,Novice,24,Pedalo riding,Movement time,-0.271,0.275,Moderate
+Becker & Smith,2013,Retention,Adults,Healthy,Novice,24,Pedalo riding,Movement time,0.352,0.274,Moderate
+Brocken et al.,2016,Retention,Children,Healthy,Novice,60,Golf putting,Radial error,0.259,0.253,Low
+Chiviacowsky et al.,2013,Retention,Children,Intellectual,Novice,24,Beanbag tossing,Accuracy score,1.356,0.44,Moderate
+Chiviacowsky et al.,2010,Retention,Older adults,Healthy,Novice,32,Balance,Time in balance,1.039,0.368,Low
+Chow et al.,2014,Retention,Adults,Healthy,Novice,16,Treadmill running,Ankle angle at initial contact phase,-0.245,0.475,Low
+Christina & Alpenfels,2014 Exp 1 & 2,Retention,Older adults,Healthy,Experienced,56,Golf swing,Adjusted swing path,0.981,0.279,Low
+da Silva et al.,2017,Retention,Children,Healthy,Novice,38,Ballet pirouette,Degree of rotation,1.493,0.361,Moderate
+Emanuel et al.,2008,Retention,Children,Healthy,Novice,32,Dart throwing,Radial error,-0.296,0.347,Moderate
+Emanuel et al.,2008,Retention,Adult,Healthy,Novice,34,Dart throwing,Radial error,0.369,0.338,Moderate
+Gredin & Williams,2016,Retention,Children,Healthy,Novice,24,Soccer chipping,Radial error,0.53,0.403,Moderate
+Hadler et al.,2014,Retention,Children,Healthy,Novice,30,Tennis serve,Accuracy score,1.034,0.38,Moderate
+Jackson & Holmes,2011,Retention,Adult,Healthy,Novice,18,Balance,Time in balance,0.131,0.321,Low
+"Kim, Hinojosa et al.",2017,Retention,Adult,Stroke,Novice,30,Arm movement,FMA-UE score,0.016,0.355,Low
+Koufou et al.,2013,Retention,Children,Healthy,Novice,20,Forward tuck roll,Movement quality score,0.791,0.446,Moderate
+Land et al.,2014,Retention,Adult,Healthy,Novice,20,Golf putting,Radial error,1.695,0.505,Low
+Laufer et al.,2007,Retention,Adult,Ankle sprain,Novice,40,Balance,Overall Stability,0.198,0.22,Low
+Lawrence et al.,2011,Retention,Adult,Healthy,Novice,20,Gymnastics,Movement form,0.948,0.454,Low
+McNevin et al.,2003,Retention,Adult,Healthy,Novice,20,Balance,Angular deviation,0.43,0.434,Low
+Mullen et al.,2012,Retention,Adult,Healthy,Novice,16,Simulation driving,Lap time,1.161,0.515,Low
+Parr & Button,2009,Retention,Children,Healthy,Novice,12,Rowing,Apex to lock distance of blade,1.585,0.623,Low
+Perreault & French,2015,Retention,Children,Healthy,Novice,28,Modified basketball free,Accuracy score,2.207,0.471,Low
+Saemi et al.,2013,Retention,Children,ADHD,Novice,20,Tennis ball throwing,Accuracy score,1.281,0.474,Moderate
+Samsudin & Low,2017,Retention,Children,ASD,Novice,10,Boule throwing,Radial error,4.428,1.143,Low
+"Shafizadeh, Platt & Bahram",2013,Retention,Adult,Healthy,Novice,24,Dart throwing,Accuracy score,0.536,0.402,Moderate
+Shea & Wulf,1999,Retention,Adult,Healthy,Novice,32,Balance,Angular deviation,0.768,0.35,Low
+Tse,2017,Retention,Children,ASD,Novice,44,Beanbag throwing,Radial error,-1.782,0.352,Moderate
+Tse & van Ginneken,2017,Retention,Children,Healthy,Novice,40,Dart throwing,Radial error,0.155,0.341,Low
+Tsetseli et al.,2016,Retention,Children,Healthy,Experienced,40,Tennis match,Score,0.507,0.315,Moderate
+Tsetseli et al.,2018,Retention,Children,Healthy,Experienced,44,Tennis serve,Score,2.259,0.382,Moderate
+Uehara et al.,2008,Retention,Adult,Healthy,Novice,12,Soccer chipping,Radial error,-0.294,0.536,Moderate
+Welling et al.,2016,Retention,Adult,Healthy,Novice,20,Jumping,Jump height,0.09,0.429,Low
+"Wulf, Chiviacowsky, et al.",2010,Retention,Children,Healthy,Novice,48,Soccer throw-in,Movement form score,0.421,0.286,Low
+Wulf et al.,1998 Exp 1 & 2,Retention,Adult,Healthy,Novice,38,Balance,angular deviation,1.371,0.351,Low
+Wulf et al.,1999,Retention,Adult,Healthy,Novice,22,Golf pitch shot,Accuracy score,1.49,0.468,Moderate
+Wulf et al.,2002 Exp 1 & 2,Retention,Adult,Healthy,Experienced,100,"Volleyball serve, soccer lofted",Accuracy score,1.281,0.217,Moderate
+Wulf et al.,2001,Retention,Adult,Healthy,Novice,28,Balance,Angular deviation,2.007,0.455,Low
+Wulf & Su,2007 Exp 1,Retention,Adult,Healthy,Novice,20,Golf pitch shot,Accuracy score,0.358,0.432,Low
+"Wulf, Wächter, et al.",2003,Retention,Children,Healthy,Novice,40,Soccer straight,Accuracy,0.338,0.316,Low
+"Wulf, Weigelt, et al.",2003,Retention,Adult,Healthy,Novice,38,Balance,Angular deviation,1.688,0.367,Low
+Zentgraf & Munzert,2009,Retention,Adult,Healthy,Novice,46,Juggling,Rate of correct trials,0.181,0.29,Low
+Ziv & Lidor,2015,Retention,Adult,Healthy,Novice,48,Golf putting,Radial error,0.068,0.284,Low
+Abdollahipour et al.,2008,Transfer,Children,Healthy,Novice,76,Soccer dribbling,Movement time,0.514,0.227,Moderate
+Abdollahipour et al.,2019 Exp 2,Transfer,Adults,impairment,Novice,26,Pedalo riding,Movement time,1.463,0.305,Moderate
+Abdollahipour et al.,2014,Transfer,Adults,Healthy,Novice,40,Dart throwing,Accuracy score,-0.134,0.096,Moderate
+Agar et al.,2016,Transfer,Children,Healthy,Novice,48,Puck shooting,Accuracy score,-0.297,0.281,Low
+Chiviacowsky et al.,2013,Transfer,Children,disability,Novice,24,Beanbag tossing,Accuracy score,1.09,0.424,Moderate
+da Silva et al.,2017,Transfer,Children,Healthy,Novice,38,Ballet pirouette,Degree of rotation,1.246,0.348,Moderate
+Emanuel et al.,2008,Transfer,Children,Healthy,Novice,32,Dart throwing,Radial error,-0.435,0.349,Moderate
+Emanuel et al.,2008,Transfer,Adult,Healthy,Novice,34,Dart throwing,Radial error,0.514,0.341,Moderate
+Flôres et al.,2005,Transfer,Children,Healthy,Novice,54,Pedalo riding,Movement time,0.423,0.189,Moderate
+Gredin & Williams,2016,Transfer,Children,Healthy,Novice,24,Soccer chipping,Radial error,-0.081,0.157,Moderate
+Hadler et al.,2014,Transfer,Children,Healthy,Novice,30,Tennis serve,Accuracy score,1.279,0.392,Moderate
+Kalkhoran & Shariati,2014,Transfer,Children,Healthy,Novice,30,Basketball dribbling,Movement time,1.454,0.292,Moderate
+Landers et al.,2016,Transfer,Adult,Idiopathic PD,Experienced,21,Balance,Berg Balance Scale,-0.013,0.297,Low
+Lawrence et al.,2011,Transfer,Adult,Healthy,Novice,20,routine,score,0.937,0.453,Low
+Makaruk et al.,2012,Transfer,Children,Healthy,Experienced,24,Jumping,Jump distance and height,0.651,0.237,Low
+Parr & Button,2009,Transfer,Children,Healthy,Novice,12,Rowing,Apex to lock distance of blade,1.814,0.649,Low
+"Shafizadeh, Platt & Bahram",2013,Transfer,Adult,Healthy,Novice,24,Dart throwing,Accuracy score,0.746,0.409,Moderate
+Totsika & Wulf,2003,Transfer,Adult,Healthy,Novice,22,Pedalo riding,Movement time,0.862,0.249,Moderate
+Tse,2017,Transfer,Children,ASD,Novice,44,Beanbag throwing,Radial error,-1.136,0.32,Moderate
+"Wulf, Chiviacowsky, et al.",2010,Transfer,Children,Healthy,Novice,48,Soccer throw-in,Movement form score,0.313,0.285,Low
+"Wulf, Wächter, et al.",2003,Transfer,Children,Healthy,Novice,40,pass,Accuracy,0.323,0.308,Low
+"Wulf, Weigelt, et al.",2003,Transfer,Adult,Healthy,Novice,38,Balance,Angular deviation,1.41,0.351,Low
+Ziv & Lidor,2015,Transfer,Adult,Healthy,Novice,48,Golf putting,Radial error,-0.123,0.284,Low

@@ -1,0 +1,301 @@
+---
+title             : "Reporting bias, not external focus: A robust Bayesian meta-analysis of the attentional focus literature"
+shorttitle        : "Reporting bias, not external focus"
+
+authornote: |
+  \vspace{-0.5cm}
+  \noindent \addORCIDlink{Brad McKay}{0000-0002-7408-2323} \newline
+  \noindent \addORCIDlink{Michael J. Carter}{0000-0002-0675-4271} \newline
+  \newline
+  \noindent Data and code: https://osf.io/vfmx2/ or https://github.com/cartermaclab/proj_foa-optimal-theory \newline
+  \newline
+  \noindent \textbf{Corresponding authors:} \newline
+  Brad McKay (bradmckay8@gmail.com) \newline
+  Michael J. Carter (cartem11@mcmaster.ca; motorlab@mcmaster.ca)
+  \newline \newline
+  \begin{tcolorbox}[width=\textwidth,colback={white},colframe=orange,coltext=black]
+    \noindent \textbf{Please cite as:} \newline
+    McKay, B., Corson, A.E., Seedu, J., De Faveri, C.S., Hasan, H., Arnold, K., Adams, F.C., \& Carter, M.J. Reporting bias, not external focus: A robust Bayesian meta-analysis of the attentional focus literature. \emph{SportR$\chi$iv}. \url{https://doi.org/10.51224/SRXIV.304}
+  \end{tcolorbox}
+
+
+abstract: |
+  Evidence has ostensibly been accumulating over the past two decades suggesting that an external focus of attention is superior to an internal focus for the performance and learning of motor skills. Seven previous meta-studies have all reported evidence of external focus superiority---the most comprehensive of which concluded the benefits apply to motor skill (a) retention, (b) transfer, and (c) performance; results in (d) reduced electromyographic activity during performance, and that (e) more distal external foci are superior to proximal external foci for performance. Here, we re-analyzed these data using robust Bayesian meta-analysis methods that included several plausible models of publication bias. We found moderate to strong evidence of publication bias for all five analyses. After correcting for publication bias, estimated mean effects were negligible: *g* = .01 (performance), *g* = .15 (retention), *g* = .09 (transfer), *g* = .06 (electromyography), and *g* = -.01 (distance effect). Bayes factors indicated data favored the null for each analysis, ranging from BF~01~ = 1.3 (retention) to 5.74 (performance). Further, we found clear evidence of heterogeneity in each analysis, suggesting the impact of attentional focus depends on yet unknown contextual factors. Our results contradict the existing consensus that an external focus is always more effective than an internal focus. Instead, focus of attention appears to have a variety of effects that we cannot account for, and on average those effects are small to nil. These results parallel previous metascience suggesting publication bias has obfuscated the motor learning literature.
+  
+keywords          : |
+  Skill acquisition, OPTIMAL theory, Metascience, Heterogeneity, Sport Science
+  \newline \hspace*{\fill} \textcolor{orange}{\textbf{\emph{PREPRINT - NOT PEER-REVIEWED}}} \hspace*{\fill}
+#wordcount         : "XXXX"
+
+bibliography      : ["../references.bib", "../r-references.bib"]
+
+floatsintext      : yes
+figurelist        : no
+tablelist         : no
+footnotelist      : no
+linenumbers       : no
+mask              : no
+draft             : no
+
+csl               : "`r system.file('rmd', 'apa7.csl', package = 'papaja')`"
+documentclass     : "apa7"
+classoption       : "doc, donotrepeattitle"
+fontsize          : 11pt
+output            : 
+  papaja::apa6_pdf:
+    latex_engine: xelatex
+
+header-includes   :
+  # - \usepackage{newtxtext,newtxmath}
+  - \usepackage{fontspec}
+  - \setmainfont{Avenir}
+ # - \usepackage{setspace}
+ # - \pagewiselinenumbers
+  - \raggedbottom
+  - \usepackage{sectsty}
+  - \sectionfont{\centering\normalfont\normalsize\bfseries}
+  - \subsectionfont{\normalfont\normalsize\bfseries\itshape}
+  - \subsubsectionfont{\normalfont\normalsize\itshape}
+  - \usepackage{censor}
+  - \usepackage{tcolorbox}
+  - \usepackage{graphicx}
+
+  - \renewcommand\author[1]{}
+  - \renewcommand\affiliation[1]{}
+  - \authorsnames[1, 2, 3, 4, 5, 5, 1, 1]{Brad McKay, Abbey E. Corson, Jeswende Seedu, Celeste S. De Faveri, Hibaa Hasan, Kristen Arnold, Faith C. Adams, Michael J. Carter\vspace{2ex}}
+  - \authorsaffiliations{{Department of Kinesiology, McMaster University}, {School of Human Kinetics, University of Ottawa}, {Faculty of Health Sciences, McMaster University}, {School of Biomedical Sciences, McGill University}, {School of Interdisciplinary Science, McMaster University}}
+---
+
+```{r setup, include=FALSE}
+library(papaja)
+library(kableExtra)
+library(tidyverse)
+```
+
+```{r analysis-preferences}
+# Seed for random number generation
+set.seed(42)
+knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
+```
+
+Where should you focus when performing and/or learning a motor skill? The most basic of questions for a novice learner and an experienced performer alike. Is it better to focus on what you are doing: where your body is in space and how it is behaving? Or is it better to focus on what you intend to do: the end effect you are trying to achieve independent of how your body achieves it? This question has been the topic of decades of research comparing an internal focus of attention (i.e., focusing on your own body) to an external focus of attention (i.e., focusing on the intended effect of the action). Gabriele Wulf pioneered this area of inquiry in 1998, publishing a two-experiment paper illustrating the benefits of adopting an external focus [@wulf1998]. In the experiments, instructing learners to focus on the wheels of a ski simulator (Experiment 1) or the markers on a balance platform (Experiment 2) led to improved motor learning compared to focusing on one’s feet. Dozens of studies have since replicated these initial findings [for reviews see @wulf2013; @wulf2007].
+
+Previous reviews have argued that research shows benefits of an external focus in four main areas: (a) effectiveness at accuracy and balance tasks, (b) efficiency in electromyographic activity, force production, speed, and endurance tasks, (c) promoting automaticity, and (d) enhancing movement form [@chua2021; @wulf2016; @wulf2013; @wulf2007]. A leading explanation for the mechanism causing these benefits is goal-action coupling: a process proposed in Wulf and Lewthwaite's [-@wulf2016] OPTIMAL theory involving a shift at the neural level that simultaneously directs action toward success and stifles deleterious self-focused cognition. While focus of attention is fundamental to the OPTIMAL theory, various perspectives in motor behavior have offered complementary accounts for external focus benefits. For example, it has been argued from the constraints-based approach that an external focus promotes the search of the task during practice and provides a constraint on emerging actions [@davids2003]. It has also been argued that actions and perceptions share a common (cognitive) code; therefore, focusing on the intended (perceptual) effect of an action is consistent with its underlying neural coding [@wulf2001; @prinz1990; @hommel2001]. While research continues to explore the putative mechanisms, there is consensus in the motor learning community that adopting an external focus of attention can improve motor performance, retention, transfer, and movement efficiency---at least most of the time [@lee2021a; @nicklas2022; @chua2021; @makaruk2020; @kim2017; @li2022; @grgic2021; @grgic2022].
+
+Buttressed by the largely positive results in the research literature, external focus of attention is now widely recommended outside of academia, including by sport coaches [skating: @smale2021; golf: @neumann2017; tennis: @kuzdub2022; baseball: @peterson2019], fitness coaches [@winkelman2015; @kompf2015], and therapists [@magne2017; @lo2019]. Researchers continue to study the use of externally focused instructions and feedback in clinical settings [@johnson2023] and are currently developing strategies for increasing awareness of the research among rehabilitation professionals [@hussien2023a; @hussien2023b; @hussien2023]. As external focus becomes evermore mainstream, recent concerns that much of the motor learning literature may be exaggerated by reporting bias [e.g., @lohse2016; @mckay2022b; @mckay2022a; @twomey2021b; @mesquida2022] underlines the need for careful assessment of the evidence. The external focus literature may be especially at risk because substantial reporting bias has been found in the motor learning literature investigating the other factors within OPTIMAL theory [@mckay2022b; @bacelar2022b; @mckay2023].
+
+## Previous meta-analyses
+
+There have been seven meta-analyses comparing the effects of internal and external focus instructions on motor outcomes. Five have focused on specific task-types: balance [@kim2017], jumping [@makaruk2020], sprinting [@li2022], strength [@grgic2021], and endurance [@grgic2022]. A sixth included all motor tasks and focused specifically on the immediate effect on performance [@nicklas2022]. Chua and colleagues [-@chua2021] conducted the most comprehensive meta-analysis of the seven, including all task-types and estimating effects on performance, retention, transfer, electromyography activity, and the distance effect. All seven studies reported the results of random effects meta-analyses as the primary estimates for the effect of focus of attention. Although there was some variance in point estimates and confidence intervals, each of the studies reported evidence that an external focus is superior to an internal focus.
+
+Importantly, a random effects model assumes no reporting bias. Two of the seven previous studies [@chua2021; @kim2017] reported evidence of funnel plot asymmetry, which is consistent with selective reporting of significant results. Two studies did not find evidence of funnel plot asymmetry [@nicklas2022; @li2022], and the other three did not investigate reporting bias at all [@grgic2021; @grgic2022; @makaruk2020]. Both studies that observed evidence of reporting bias conducted a fail-safe-style sensitivity analysis, but did not correct the primary estimates for the presence of bias. The meta-analysis by @chua2021 did calculate worst-case-scenario estimates based on a random effects meta-analysis of the non-significant results. Thus, although reporting bias may be prevalent in the field of motor learning [@lohse2016], and two previous meta-analyses have found evidence of reporting bias in the attentional focus literature [@chua2021; @kim2017], the primary estimates from all previous meta-analyses assume bias is absent.
+
+Consistent with the other studies, @chua2021 reported moderate benefits of an external focus for learning measures (*g* = .58) and small benefits for performance measures (*g* = .26) and the distance effect (*g* = .22). Chua and colleagues also reported a large effect on electromyography activity (*g* = .83). In lieu of bias-corrected estimates, worst-case scenario estimates were calculated to evaluate how sensitive the primary estimates were to an assumed model of reporting bias. Under the assumed model, significant results in the predicted direction are published without censorship, while all non-significant results and significant results in the opposite direction are censored at the same rate. The worst-case scenario is simply the random effects estimate of all the non-preferred outcomes, since a preference for significant results in the predicted direction cannot upwardly bias an estimate if significant results are removed. If the worst-case scenario is positive, then one can conclude that no amount of reporting bias could attenuate the point estimate to the null value. However, this conclusion is only merited if censorship is entirely captured by the assumed model. If other plausible mechanisms of censorship are present, then the assumed model does not hold, and the worst-case scenario estimates can no longer be considered as such.
+
+Although @chua2021 concluded that no amount of reporting bias could attenuate the effect to the null value for any measure (performance, retention, transfer, electromyography, and the distance effect), there are several plausible censorship mechanisms that were unexplored. For example, it is plausible that nearly significant results, often called non-significant trends [@otte2022], were censored less than other non-significant trends. It is also possible that point estimates favoring an internal focus were the least preferred result. If these plausible alternative censorship mechanisms were active in the attentional focus literature, then the random effects estimate of "all non-significant in the predicted direction" results would be positively biased. While @chua2021 concluded that external focus superiority is not sensitive to reporting bias, it remains unknown if that conclusion is sensitive to the form of reporting bias that was assumed.
+
+## Present study
+
+Seven previous meta-analyses provide primary estimates of the potential benefit of an external focus of attention while assuming reporting bias is absent. Given the evidence of reporting bias reported in two of those studies [@chua2021; @kim2017], along with evidence of extensive bias in related literatures [e.g., @lohse2016; @mckay2023], bias-corrected estimates are needed. There are several plausible mechanisms of reporting bias, and the true model is unknowable. Therefore, using a robust Bayesian approach to meta-analysis [@bartos2023], we leveraged Bayesian model-averaging to fit several plausible models of reporting bias to the attentional focus literature examined by @chua2021. Greater weight was given to the models that best accounted for the results and less weight was given to poorly performing models. This approach allowed us to calculate reporting-bias-adjusted estimates for the effect of attentional focus on motor learning, performance, electromyography activity, and for the distance effect. Our approach naturally allowed us to evaluate Chua and colleagues' [-@chua2021] claims that no amount of reporting bias could attenuate the effect to the null value.
+
+In addition to censorship mechanisms, we also explored the role of *post hoc* outcome selection leading to potentially exaggerated estimates. The previous seven meta-analyses either did not specify exactly how outcomes were selected for analysis [@grgic2021; @grgic2022; @kim2017; @makaruk2020; @li2022], excluded studies that had more than one performance measurement unless the measures could be ranked and a primary measure could be selected [@nicklas2022], or selected the outcome positioned as primary in the original research article [@chua2021]. The attentional focus literature has not made use of preregistration or Registered Reports, so it is possible that the most impressive results have sometimes been positioned as primary because they were the most impressive. If this sort of *post hoc* selection is present, then selecting outcomes based on their status in the original article may lead to biased estimates. To evaluate the possibility of *post hoc* selection bias, we extracted effect size estimates for the retention test outcomes that were not selected by @chua2021, but could have been, and compared them to the selected "primary" outcomes.
+
+In the present study, we addressed the following questions: (a) What is the reporting-bias-adjusted estimate for the effect of attentional focus on learning, performance, electromyography activity, and the distance effect? (b) How sensitive are random effects estimates to the assumption that reporting bias is absent? (c) How sensitive are Chua and colleagues' [-@chua2021] conclusions that no amount of reporting bias could attenuate the effect to the null value to the specific model of censorship that was evaluated? and (d) How influential was *post hoc* selection bias on the estimated benefits of an external focus of attention on retention performance?
+
+# Methods
+
+The data, code, and preregistration for this study can be found at either https://osf.io/vfmx2/ or https://github.com/cartermaclab/proj_foa-optimal-theory. The data for each primary outcome measure were collected and reported by @chua2021. Our re-analysis of those data was not preregistered as we were already aware of Chua and colleagues' [-@chua2021] primary conclusions and had seen the data visualizations in their study. Data for up to three additional outcomes from each experiment that examined retention test performance were collected and analyzed according to our preregistered protocol.
+
+## Eligibility
+
+Our analysis was restricted to the studies included in the study by @chua2021, meaning our study inherits the inclusion criteria imposed in their study: (a) published in English between February 1998 and April 2019, (b) in a peer-reviewed journal, (c) compared internal and external foci of attention, or at least two types of external focus, (d) measured motor learning or performance, (e) used a within-participant design to measure performance and a between participants design to measure learning, (f) included sufficient data to calculate effect sizes, and (g) were experiments.
+
+## Data collection process
+
+The data reported by @chua2021 were extracted directly from the published article. Additionally, up to three outcomes were extracted from each experiment included in the meta-analysis of retention test performance. Data were extracted in duplicate by two of six researchers working independently. The lead author evaluated each pair of extractions using the `R` package `daff` [@R-daff] for consensus and resolved all conflicts.
+
+Outcome measures were selected for extraction based on our preregistered priority list (see Table \@ref(tab:table1)). A priority list achieved two goals. First, it prevented selection bias when several outcomes were reported in a study by establishing which outcomes to select *a priori*. Second, the list prioritized outcomes most connected to the goal of the task over outcomes only correlated with success. This ensured the dependent variables most indicative of goal-action coupling were selected from each study.
+
+```{r table1, echo = FALSE, results = "asis"}
+table1 <- tibble::tibble(
+  c1 = c(1:5),
+  c2 = c("Absolute error",
+         "Root mean squared error / Total error",
+         "Accuracy points",
+         "Variable error",
+         "Absolute timing error"),
+  c3 = c(6:10),
+  c4 = c("Relative timing error",
+         "Absolute constant error",
+         "Movement time",
+         "Movement form (Expert raters)",
+         "Other")
+)
+table1 |>  
+  kbl(booktabs = TRUE,
+      escape = TRUE,
+      #linesep = "\\addlinespace",
+      align = c("c", "l", "c", "l"),
+      caption = "Priority list for extracting outcome measures.",
+      col.names = c("Priority",
+                    "Measure",
+                    "Priority",
+                    "Measure")
+  )  |>  
+  kable_styling(position = "left",
+                font_size = 10
+                #latex_options = "scale_down"
+                )
+```
+
+The sample sizes, direction of effect, means, and standard deviations were extracted for each measure when available. If standard deviations were not reported, data were extracted in the following order of priority: means and standard errors, *F*-values, then *t*-values. If the required data were not reported in the text of the article, but were presented in figures with error bars, then the mean and standard deviation were extracted by digitizing the plots [@rohatgi2022]. If data could not be extracted with plot digitization, then the authors were emailed, and the data were requested. If the authors did not respond, a follow up email was sent. Hedges' *g* for the newly extracted outcomes was calculated using the `R` package `compute.es` [@R-compute.es]. Risk of bias from methodological weaknesses was well probed by @chua2021 and was not revisited in this study.
+
+## Synthesis methods
+
+### Influential cases
+
+We screened the data for influential cases using the `R` package `metafor` [@R-metafor]. After fitting univariate random effects models for each meta-analysis, externally standardized residuals and Cook’s distances were calculated. Studies identified as extreme by both measures were considered influential and a sensitivity analysis was conducted with the studies removed.
+
+### Reporting bias
+
+We implemented a robust Bayesian approach [@bartos2023] to reanalyze the five meta-analyses reported by @chua2021. We used neutral default priors for the presence of an effect (*p* = .5), the presence of heterogeneity (*p* = .5), and the presence of reporting bias (*p* = .5). Reporting bias was probed using selection models and funnel plot regression models. In the selection model class, six different weight-function models were fit to model censorship based on specific *p*-value thresholds. For example, one selection model captures the possibility that significant results in the predicted direction are more likely to survive to be published than both null results and significant results in the unpredicted direction. Another selection model captures the possibility that results in the unpredicted direction are the least likely to survive censorship, while non-significant trends are more likely than other null results, but not as likely as significant results to survive.
+
+A total of six selection models capturing different plausible censorship scenarios are assigned half of the prior probability that reporting bias exists. The other half of the prior probability is allocated to funnel plot regression models. The precision-effect test (PET) and precision-effect estimate with standard errors (PEESE) respectively model a linear and quadratic relationship between standard error and effect size. If the data were censored such that lower *p*-values had a higher probability of surviving, a correlation would emerge between two otherwise independent causes of *p*-values: effect sizes and standard errors. The PET method fits a linear relationship between effect size and standard error, modeling a consistent level of censorship across studies. The PEESE method fits a quadratic relationship, reflecting the possibility that studies with small standard errors, and thus large samples, are likely to be reported regardless of the results, while small studies with large standard errors require increasingly impressive results to garner publication. 
+
+A total of 36 models were fit to the data with every combination of the eight reporting bias models, models assuming an effect, no effect, heterogeneity, no heterogeneity, and no reporting bias. The estimates of each model were combined using Bayesian model-averaging, where model estimates are weighted based on how well the model fit the data. A single posterior distribution was generated for the average effect of an external focus and the average value of *tau*---the estimated heterogeneity. Further, Bayes Factors were calculated measuring the evidence in favor of an effect, the presence of heterogeneity, and reporting bias.
+
+### Post-hoc selection bias
+
+A multi-level mixed effects model with outcomes nested in study, and with cluster-robust standard errors compared the outcomes selected by @chua2021 to the additional outcomes that might have been selected instead. Profile analysis was conducted to ensure the model converged on unique solutions for estimates of *Mu* and *tau*.
+
+### Statistical packages
+
+Statistical analyses were conducted using `r cite_r("../r-references.bib")` were used in this project.
+
+# Results
+
+```{r echo=FALSE}
+source("../../scripts/results_summary-for-paper.R")
+```
+
+Model-averaged posterior distributions for each analysis with and without outliers are presented in Figure \@ref(fig:fig1).
+
+## Performance
+
+Influence analyses revealed four studies could be considered outliers in the performance meta-analysis. We report the results with all studies included first, then with outliers removed. The mean of the model-averaged posterior distribution for the difference between external and internal foci of attention on motor skill performance was *g* = `r performance_mean`, 95% credible interval: `r performance_lb`, `r performance_ub`. The data were over 5 times more compatible with the null hypothesis than the alternative, BF~10~ = `r performance_BF10`. There was clear evidence of heterogeneity, $\tau$ = `r performance_tau`, BF~rf~ = Infinite. There was also clear evidence of publication bias, BF~pb~=`r performance_BFpb`. Removing influential cases did not substantively change the conclusions: *g* = `r performance2_mean`, 95% credible interval: `r performance2_lb`, `r performance2_ub`, BF~10~ =`r performance2_BF10`; $\tau$ =`r performance2_tau`, BF~rf~ = `r performance2_BFrf`; BF~pb~ = `r performance2_BFpb`.
+
+## Retention
+Two studies were identified as possible outliers in the retention test meta-analysis. Again, the results with all studies included are reported first, then with outliers removed. The mean of the model-averaged posterior distribution for the effect of focus of attention on retention was *g* = `r retention_mean`, 95% credible interval: `r retention_lb`, `r retention_ub`. The data were somewhat more consistent with the null hypothesis than the alternative, BF~10~ = `r retention_BF10`. There was clear evidence of heterogeneity, $\tau$ = `r retention_tau`, BF~rf~ = Infinite. The data were  5.9 times more compatible with models assuming publication bias than without, BF~pb~ = `r retention_BFpb`. Removing two influential cases did not substantively change the conclusions: *g* = `r retention2_mean`, 95% credible interval: `r retention2_lb`, `r retention2_ub`, BF~10~=`r retention2_BF10`; $\tau$ =`r retention2_tau`, BF~rf~ = `r retention2_BFrf`; BF~pb~ = `r retention2_BFpb`.
+
+## Transfer
+
+One possible outlier was identified in the transfer test meta-analysis. The mean of the model-averaged posterior distribution of all transfer outcomes was *g* = `r transfer_mean`, 95% credible interval: `r transfer_lb`, `r transfer_ub`. The results were somewhat more likely under the null hypothesis than the alternative, BF~10~ = `r transfer_BF10`. There was clear evidence of heterogeneity, $\tau$ = `r transfer_tau`, BF~rf~ = Infinite. The data were more than 6.4 times more likely under models assuming publication bias, BF~pb~ = `r transfer_BFpb`. Removing one influential case did not substantively change the conclusions: *g* = `r transfer2_mean`, 95% credible interval: `r transfer2_lb`, `r transfer2_ub`, BF~10~ = `r transfer2_BF10`; $\tau$ = `r transfer2_tau`, BF~rf~ = `r transfer2_BFrf`; BF~pb~ = `r transfer2_BFpb`.
+
+## Electromyography
+
+There were no outliers identified in the electromyography meta-analysis. The mean of the model-averaged posterior distribution for the effect of attentional focus on electromyography activity was *g* = `r emg_mean`, 95% credible interval: `r emg_lb`, `r emg_ub`. The data were twice as likely under the null hypothesis as the alternative, BF~10~ = `r emg_BF10`. There was clear evidence of heterogeneity, $\tau$ = `r emg_tau`, BF~rf~ = Infinite. There was very strong evidence of publication bias, BF~pb~ = `r emg_BFpb`.
+
+## Distance effect
+
+One possible outlier was identified in the distance effect meta-analysis. The mean of the model-averaged posterior distribution for the difference between distal and proximal external foci was *g* = `r distance_mean`, 95% credible interval: `r distance_lb`, `r distance_ub`. The results were over 3.8 times more likely under the null hypothesis than the alternative, BF~10~ = `r distance_BF10`. There was clear evidence of heterogeneity, $\tau$ = `r distance_tau`, BF~rf~ = `r distance_BFrf`. There was overwhelming evidence of publication bias, BF~pb~ = `r distance_BFpb`. Removing the influential case did not substantively change the conclusions: *g* = `r distance2_mean`, 95% credible interval: `r distance2_lb`, `r distance2_ub`, BF~10~ = `r distance2_BF10`; $\tau$ = `r distance_tau`, BF~rf~ = `r distance2_BFrf`; BF~pb~ = `r distance2_BFpb`.
+
+\clearpage
+
+```{r fig1, echo = FALSE, fig.cap = "(ref:fig1-caption)", fig.align = "center"}
+knitr::include_graphics("../../figs/fig1.pdf")
+```
+
+(ref:fig1-caption) \footnotesize \normalfont \textbf{Posterior plots of the standardized mean difference with and without outliers.} The effect size estimates (*g*) of each meta-analysis with all studies included (top row) and with outliers removed (bottom row). The histograms in the first column reflect the prior distribution, with 50% of the probability density concentrated on zero effect (the null hypothesis) and 50% of the density normally distributed (*M* = 0, *SD* = 1). The model-averaged posterior distributions for performance, retention, transfer, electromyography, and the distance effect are presented in the second through sixth columns, respectively. Increased belief in the null hypothesis is visible for each analysis, illustrated by the increased height of the spike at *g* = 0 in all posteriors relative to the prior distribution.
+
+\clearpage
+
+## Selection moderator
+
+Outcomes selected for inclusion in Chua and colleagues' [-@chua2021] meta-analysis of retention performance were somewhat larger (*g* = `r selected_mean`, 95% confidence interval: `r selected_lb`, `r selected_ub`) than the additional outcomes that could have been extracted but were not (*g* = `r not_selected_mean`, 95% confidence interval: `r not_selected_lb`, `r not_selected_ub`; see Figure \@ref(fig:fig2)). However, the difference between selected and not-selected outcomes was not statistically significant, *F*(`r qdf1`, `r qdf2`) = `r q`, *p* = `r q_p`.
+
+## Individual model fit
+
+As implied by the results of each analysis, the best performing models overall assumed heterogeneity, publication bias, and zero effect (see Figure \@ref(fig:fig3)). The best fitting publication bias models were the PET and PEESE funnel plot regression models, as well as the selection models that assumed directional hypotheses, particularly those that modeled censorship based on the direction of the point estimate. This pattern of findings suggests complex, results-based selection mechanisms linked to more than just statistical significance.
+
+\clearpage
+\vspace{-3em}
+
+```{r fig2, echo = FALSE, fig.cap = "(ref:fig2-caption)", fig.align = "center", out.height = "79%"}
+knitr::include_graphics("../../figs/fig2a.pdf")
+```
+
+(ref:fig2-caption) \footnotesize \normalfont \textbf{Forest plot of retention outcomes separated by "selected" moderator.} Standardized mean difference (*g*) and 95% confidence intervals for each study included in the meta-analysis of retention outcomes. The green polygon represents the mean and 95% confidence interval for outcomes that @chua2021 selected for analysis. The purple polygon represents the estimate for outcomes reported in the original experiments but were not selected by @chua2021. The error bars extending from both polygons reflect the 95% prediction interval, illustrating the range of outcomes we would expect to observe in 95% of studies randomly sampled from the same population of studies included in this analysis. The prediction intervals account for the substantial unexplained heterogeneity present in these data, showing that even without correcting for publication bias we would expect outcomes across the entire plausible range of effects.
+
+\clearpage
+
+```{r fig3, echo = FALSE, fig.cap = "(ref:fig3-caption)", fig.align = "center"}
+knitr::include_graphics("../../figs/fig3.pdf")
+```
+
+(ref:fig3-caption) \footnotesize \normalfont \textbf{Total Inclusion Bayes Factor for each model relative to the ensemble, summed across each of the five analyses with and without outliers.} Higher Inclusion Bayes Factors indicate better agreement with the data than the average of the ensemble. The green circles represent naïve fixed and random effects models that assume no publication bias. The purple circles represent six selection models and two regression models, each modeling publication bias in a different way. A figure illustrating each of the publication bias models is displayed below the lollipop plot, shown in the same left-to-right order they follow in the plot above. The size of each circle reflects the prior probability assigned to the model (*p* = .125 for naïve models, *p* = .031 for regression models, and *p* = .01 for selection models). The naïve and publication bias models were fit testing four scenarios: (a) an effect is present, no heterogeneity, (b) an effect is present, heterogeneity is present, (c) an effect is absent, no heterogeneity, and (d) an effect is absent, heterogeneity is present. The PEESE model, presented on the far right in each scenario, dominated the other models when assuming an effect is absent and heterogeneity is present. To better illustrate the performance of each model in the ensemble, Inclusion Bayes Factors are shown on a log scale on the *y*-axis.
+
+\clearpage
+
+
+# Discussion
+
+We re-evaluated the evidence in support of an external focus benefit for learning, performance, muscular efficiency, and the distance effect. Seven previous meta-analyses have relied on the results of naïve random effects models that assume zero reporting bias in the primary estimates. Each of these studies concluded that an external focus is superior to an internal focus. @kim2017 reported the benefits applied to balance learning, performance, and transfer. @makaruk2020 found the same for jump performance and @li2022 reported similar results for sprint performance. Grgic and colleagues reported external focus benefits for both muscular strength and endurance [@grgic2021; @grgic2022]. @nicklas2022 reported the advantage of an external focus over an internal focus applied to immediate performance in general. The most comprehensive of the meta-analyses, and the study whose data we reanalyzed, was conducted by @chua2021. They estimated small to moderate benefits for each specific effect and concluded that no amount of publication bias could attenuate the observed effects to zero.
+
+Our results differ from previous studies as reporting bias was ignored in their primary estimates. We explicitly modeled bias and estimated trivially small effects in each analysis. While @chua2021 concluded that no amount of publication bias could reduce the effects to the null, our models suggest the data favor the null hypothesis for each analysis. If the only type of reporting bias in the literature is one-sided selection at *p* = .05, then Chua and colleagues' conclusions were justified. However, if there were other considerations, such as sample size, trends, and direction of point estimates, the assumptions of their model were violated. Our analysis suggests this is the case for the focus of attention literature.
+
+Although we observed somewhat larger estimates among effects selected by @chua2021 than among alternative outcomes that could have been selected, the difference was small and easily attributable to chance. The stronger signal for selection came from censorship prior to appearing in the published sample. Thus, the average reader of this literature would not have been inoculated against bias by having access to the complete results of each paper. The biasing influence of censorship would have already affected the sample of information readers could access.
+
+These findings underscore uncertainty about external focus benefits. Adding to this uncertainty, we observed significant unexplained heterogeneity in effects. This heterogeneity could imply that focus of attention has a range of effects that depend on situational factors. If so, our results suggest that an internal focus may be superior to an external focus in nearly as many situations as the reverse. Alternatively, this heterogeneity may be due to methodological idiosyncrasies, unmodeled selection, or poor data curation at any level. As with censorship mechanisms, we have no way to know which potential sources of heterogeneity were at play.
+
+Unfortunately, the present results add to a growing body of metascience questioning the extant support for the predictions in OPTIMAL theory [see @mckay2023 for a recent meta-analysis on the other two pillars in the theory]. In addition to predicting external focus benefits for learning and performance, OPTIMAL theory also predicts beneficial effects for autonomy and enhanced expectancies via similar underlying mechanisms [@wulf2016]. The primary corpus of evidence supporting motor learning benefits from autonomy is the self-controlled practice literature. Self-controlled practice involves asking learners to choose an aspect of their practice environment and the published literature suggests this will confer noticeable benefits to performance and learning [for a review see @stemarie2020]. However, like the external focus literature, the self-controlled practice research shows substantial evidence of reporting bias and more support for the null hypothesis [@mckay2022b]. Approximately the same pattern emerges for the enhanced expectancies research [@bacelar2022b]. While the published literature appears to unequivocally demonstrate the predicted motor benefits of enhancing a learner’s expectancy for success, accounting for reporting bias suggests uncertainty and heterogeneity [@mckay2023]. Taken together, this meta-evidence suggests the underlying mechanism common to all three factors of the tripartite OPTIMAL theory may be censorship. The mechanisms forwarded in OPTIMAL theory are made no less valid by this conclusion; it is the evidence rather than the theory that has been impugned by this body of work.
+
+## Limitations
+
+The evidence in the review contains small sample sizes and small to moderate risk of bias according to Chua and colleagues [-@chua2021]. None of the studies were preregistered. There were 20 studies missing due to insufficient information to calculate effect sizes in the original data set and another four missing effects from our extraction of secondary outcomes.
+
+We did not explore whether manipulation checks verified that the instructed attentional focus was adopted during performance. OPTIMAL theory predicts that when learners focus on their intended effect on the environment, they facilitate goal-action coupling, benefiting learning and performance. Our analysis only investigated whether instructions impacted performance. Perhaps a missing moderator in our analysis was the extent to which focus instructions were followed in each experiment. We chose not to explore this possibility because there are no validated manipulation checks.
+
+## Recommendations and conclusions
+
+The potential benefit of adopting an external focus of attention is among the most important contributions of academic motor learning research. It fits with numerous theoretical perspectives in the scientific literature and has been widely promoted in an array of applied settings, including sports, rehabilitation, and education. Our findings impugn the evidential basis for the superiority of an external focus of attention. However, rather than establishing nil or trivial benefits from focusing externally, uncertainty remains. The posteriors include interesting effects, there may be important moderators, and our estimates may have overcorrected for bias. We simply do not know if an external focus provides meaningful benefits to motor learning and performance or not.
+
+Building knowledge about external focus effects can be accelerated by adoption of the Registered Report publication format [@chambers2019]. Registered Reports prevent publication bias [@scheel2021], and when they include preregistration of analysis plans, they prevent *p*-hacking [@simmons2011] and HARKing [@kerr1998] as well. Limited resources may prevent individual laboratories from collecting sufficient sample sizes for a well-powered registered report, so researchers are encouraged to collaborate extensively to achieve the sample sizes necessary to make progress.
+
+\newpage
+
+## Author contributions (CRediT Taxonomy)
+
+\noindent Conceptualization: BM, MJC  
+\noindent Data curation: BM, MJC  
+\noindent Formal analysis: BM  
+\noindent Funding acquisition: MJC  
+\noindent Investigation: BM, AEC, JS, CSDF, HH, KA, FCA, MJC  
+\noindent Methodology: BM, MJC  
+\noindent Project administration: BM, MJC  
+\noindent Software: BM, MJC  
+\noindent Supervision: MJC  
+\noindent Validation: BM, MJC  
+\noindent Visualization: BM, MJC  
+\noindent Writing -- original draft: BM, AEC, JS, CSDF, HH, KA, FCA, MJC  
+\noindent Writing -- review & editing: BM, AEC, JS, CSDF, HH, KA, FCA, MJC  
+
+## Data availability statement
+
+\noindent The data and scripts can be accessed using either of the following links: https://osf.io/vfmx2/ or https://github.com/cartermaclab/proj_foa-optimal-theory}.
+
+## Declaration of interest statement
+
+\noindent All authors declare no conflicts of interest.
+
+## Funding
+
+\noindent This work was supported by the Natural Sciences and Engineering Research Council (NSERC) of Canada (RGPIN-2018-05589; MJC) and McMaster University (MJC).
+
+\newpage
+
+# References
+
+\vspace{2ex}
+::: {#refs custom-style="Bibliography"}
+:::
+
