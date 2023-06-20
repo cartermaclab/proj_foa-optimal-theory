@@ -442,12 +442,12 @@ fig_bfs <- ggplot(bf_flipped, x = model, y = BF_tot) +
   guides(size = "none") +
   annotate("text",
            x = 9.5,
-           y = 650,
+           y = -.7,
            label = "Effect is Present",
            size = 6) +
   annotate("text",
            x = 27.5,
-           y = 650,
+           y = -.7,
            label = "Effect is Absent",
            size = 6) +
   annotate("rect",
@@ -459,19 +459,19 @@ fig_bfs <- ggplot(bf_flipped, x = model, y = BF_tot) +
            alpha = 0.09) +
   annotate("text",
            x = 4.75,
-           y = 550,
+           y = -.3,
            label = "No Heterogeneity") +
   annotate("text",
            x = 14.25,
-           y = 550,
+           y = -.3,
            label = "Heterogeneity") +
   annotate("text",
            x = 23.25,
-           y = 550,
+           y = -.3,
            label = "No Heterogeneity") +
   annotate("text",
            x = 32.25,
-           y = 550,
+           y = -.3,
            label = "Heterogeneity") +
   theme(legend.title = element_blank(),
         plot.margin = margin(t = 20, unit = "pt"),
@@ -511,7 +511,7 @@ model1 <- plot_ly(
 )
 model1 <- model1 %>% layout(
   font = list(
-    size = 45,
+    size = 55,
     color = "black"
   )
 )
@@ -544,7 +544,7 @@ model2 <- plot_ly(
 )
 model2 <- model2 %>% layout(
   font = list(
-    size = 45,
+    size = 55,
     color = "black"
   )
 )
@@ -576,7 +576,7 @@ model3 <- plot_ly(
 )
 model3 <- model3 %>% layout(
   font = list(
-    size = 45,
+    size = 55,
     color = "black"
   )
 )
@@ -609,7 +609,7 @@ model4 <- plot_ly(
 )
 model4 <- model4 %>% layout(
   font = list(
-    size = 45,
+    size = 55,
     color = "black"
   )
 )
@@ -642,7 +642,7 @@ model5 <- plot_ly(
 )
 model5 <- model5 %>% layout(
   font = list(
-    size = 45,
+    size = 55,
     color = "black"
   )
 )
@@ -678,7 +678,7 @@ model6 <- plot_ly(
 )
 model6 <- model6 %>% layout(
   font = list(
-    size = 45,
+    size = 55,
     color = "black"
   )
 )
