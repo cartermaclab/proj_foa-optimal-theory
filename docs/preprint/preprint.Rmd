@@ -221,7 +221,7 @@ As implied by the results of each analysis, the best performing models overall a
 \vspace{-3em}
 
 ```{r fig2, echo = FALSE, fig.cap = "(ref:fig2-caption)", fig.align = "center", out.height = "79%"}
-knitr::include_graphics("../../figs/fig2a.pdf")
+knitr::include_graphics("../../figs/fig2.pdf")
 ```
 
 (ref:fig2-caption) \footnotesize \normalfont \textbf{Forest plot of retention outcomes separated by "selected" moderator.} Standardized mean difference (*g*) and 95% confidence intervals for each study included in the meta-analysis of retention outcomes. The green polygon represents the mean and 95% confidence interval for outcomes that @chua2021 selected for analysis. The purple polygon represents the estimate for outcomes reported in the original experiments but were not selected by @chua2021. The error bars extending from both polygons reflect the 95% prediction interval, illustrating the range of outcomes we would expect to observe in 95% of studies randomly sampled from the same population of studies included in this analysis. The prediction intervals account for the substantial unexplained heterogeneity present in these data, showing that even without correcting for publication bias we would expect outcomes across the entire plausible range of effects.
